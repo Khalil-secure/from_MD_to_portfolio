@@ -301,19 +301,19 @@ nav{
   <nav>
     <button class="nav-btn active" onclick="show('home',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      Home
+      <span id="nav-txt-home">Home</span>
     </button>
     <button class="nav-btn" onclick="show('experience',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-      Experience
+      <span id="nav-txt-exp">Experience</span>
     </button>
     <button class="nav-btn" onclick="show('projects',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      Projects
+      <span id="nav-txt-proj">Projects</span>
     </button>
     <button class="nav-btn" onclick="show('certifications',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-      Certs
+      <span id="nav-txt-cert">Certs</span>
     </button>
   </nav>
   <div style="display:flex;align-items:center;gap:14px;position:relative;z-index:1">
@@ -332,7 +332,7 @@ nav{
 <!-- HOME -->
 <section id="home" class="section active">
   <div class="home-left">
-    <p class="eyebrow"><span class="eyebrow-line"></span>AI Infrastructure Engineer</p>
+    <p class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrow-txt">AI Infrastructure Engineer</span></p>
     <h1 class="name">
       <span style="display:block">Khalil</span>
       <span class="acc">Ghiati.</span>
@@ -486,11 +486,11 @@ nav{
     <div class="proj-toggle">
       <button class="toggle-btn active" id="btn-code" onclick="switchProj('code')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        Coding Projects
+        <span id="btn-code-txt">Coding Projects</span>
       </button>
       <button class="toggle-btn t-demo" id="btn-demo" onclick="switchProj('demo')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        Live Demos
+        <span id="btn-demo-txt">Live Demos</span>
       </button>
     </div>
     <div id="view-code">
