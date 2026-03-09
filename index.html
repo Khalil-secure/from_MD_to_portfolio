@@ -207,7 +207,7 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
     </button>
   </nav>
   <div class="top-right">
-    <div class="avail"><span class="avail-dot"></span><span id="avail-txt">open to work</span></div>
+    <div class="avail"><span class="avail-dot"></span><span id="avail-txt" data-editable>open to work</span></div>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
       <button class="lang-btn" onclick="setLang('fr',this)">FR</button>
@@ -221,10 +221,10 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 
 <section id="home" class="section active">
   <div class="home-left">
-    <p class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrow-txt">Network Engineer </span></p>
+    <p class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrow-txt" data-editable>Network Engineer </span></p>
     <h1 class="name"><span style="display:block">Khalil</span><span class="acc">Ghiati.</span></h1>
-    <p class="tagline" id="tagline-txt"> AI · DevSecOps</p>
-    <p class="desc" id="desc-txt">Engineering graduate specialised in <strong>Networking AI-driven infrastructure</strong> and <strong>cybersecurity</strong>. I build systems where <strong>AI is a first-class infrastructure component</strong> — not a plugin. From <strong>5G telecom at Bouygues</strong> to <strong>LLM agents monitoring production Docker environments</strong>.</p>
+    <p class="tagline" id="tagline-txt" data-editable> AI · DevSecOps</p>
+    <p class="desc" id="desc-txt" data-editable>Engineering graduate specialised in <strong>Networking AI-driven infrastructure</strong> and <strong>cybersecurity</strong>. I build systems where <strong>AI is a first-class infrastructure component</strong> — not a plugin. From <strong>5G telecom at Bouygues</strong> to <strong>LLM agents monitoring production Docker environments</strong>.</p>
     <div class="socials">
       <a href="https://github.com/Khalil-secure" target="_blank" class="soc">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
@@ -237,7 +237,7 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
     </div>
   </div>
   <div class="home-right">
-    <p class="stack-label" id="stack-label-txt">Tool stack</p>
+    <p class="stack-label" id="stack-label-txt" data-editable>Tool stack</p>
     <div class="stack-groups">
       <div class="stack-group">
         <div class="group-title">AI &amp; Automation</div>
@@ -290,8 +290,8 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 
 <section id="experience" class="section">
   <div class="exp-wrap">
-    <h2 class="sec-title" id="exp-title">Where I've <span class="acc">shipped.</span></h2>
-    <p class="sec-sub" id="exp-sub">// real work · real impact · production systems</p>
+    <h2 class="sec-title" id="exp-title" data-editable>Where I've <span class="acc">shipped.</span></h2>
+    <p class="sec-sub" id="exp-sub" data-editable>// real work · real impact · production systems</p>
     <div class="timeline">
       <div class="exp-card">
         <div class="exp-top"><div class="exp-co">Bouygues Telecom</div><div class="exp-period">Sept 2024 — Sept 2025</div></div>
@@ -333,21 +333,21 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 
 <section id="projects" class="section">
   <div class="proj-wrap">
-    <h2 class="sec-title" id="proj-title">Built, broken, <span class="acc">documented.</span></h2>
+    <h2 class="sec-title" id="proj-title" data-editable>Built, broken, <span class="acc">documented.</span></h2>
     <div class="proj-toggle">
       <button class="toggle-btn active" id="btn-code" onclick="switchProj('code')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        <span id="btn-code-txt">Coding Projects</span>
+        <span id="btn-code-txt" data-editable>Coding Projects</span>
       </button>
       <button class="toggle-btn t-demo" id="btn-demo" onclick="switchProj('demo')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        <span id="btn-demo-txt">Live Demos</span>
+        <span id="btn-demo-txt" data-editable>Live Demos</span>
       </button>
     </div>
     <div id="view-code">
-      <p class="proj-subtitle" id="proj-sub-code">Public repos · fetched live from GitHub · click to open</p>
+      <p class="proj-subtitle" id="proj-sub-code" data-editable>Public repos · fetched live from GitHub · click to open</p>
       <div id="proj-grid" class="proj-grid"><div class="spin-wrap"><div class="spinner"></div><span>Fetching repos...</span></div></div>
-      <button id="load-more-btn" class="load-more" style="display:none" onclick="loadMore()">load more</button>
+      <button id="load-more-btn" class="load-more" style="display:none" onclick="loadMore()" data-editable>load more</button>
     </div>
     <div id="view-demo" style="display:none">
       <p class="proj-subtitle" id="proj-sub-demo">Live demos · GIF walkthroughs · click to view on GitHub</p>
@@ -358,8 +358,8 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 
 <section id="certifications" class="section">
   <div class="certs-wrap">
-    <h2 class="sec-title" id="cert-title">Credentials &amp; <span class="acc">Training.</span></h2>
-    <p class="sec-sub" id="cert-sub">// certifications · formation · active learning</p>
+    <h2 class="sec-title" id="cert-title" data-editable>Credentials &amp; <span class="acc">Training.</span></h2>
+    <p class="sec-sub" id="cert-sub" data-editable>// certifications · formation · active learning</p>
     <div class="certs-grid">
       <div class="cert-card"><span class="cert-ico">🎓</span><div class="cert-name">Engineering Degree</div><div class="cert-iss">ENSIL-ENSCI — Limoges</div><div class="cert-desc" id="cert-desc-0">Electronics &amp; Telecommunications · 2022–2026. Infrastructure &amp; Security.</div><span class="cbadge cbg">Obtained</span></div>
       <div class="cert-card"><span class="cert-ico">🎯</span><div class="cert-name">SOC Level 1</div><div class="cert-iss">TryHackMe</div><div class="cert-desc" id="cert-desc-1">Blue team operations, threat detection and incident response.</div><span class="cbadge cbg">Certified</span></div>
