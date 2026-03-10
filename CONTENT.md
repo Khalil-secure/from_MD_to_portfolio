@@ -17,7 +17,7 @@
 ### Short Bio
 - **EN Eyebrow**: Systeme & Network Engineer
 - **EN Tagline**: DevSecOps · Agentic AI · Cloud 
-- **FR Eyebrow**: Ingénieur systeme & Réseaux
+- **FR Eyebrow**: Ingénieur Systèmes & Réseaux
 - **FR Tagline**: DevSecOps · Agents IA ·  Cloud
 
 ### Name

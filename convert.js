@@ -1,97 +1,74 @@
 #!/usr/bin/env node
 /**
- * CONTENT.md → content.json converter
- * Automatically converts markdown content file to JSON
+ * CONTENT.md → HTML converter
+ * Parses markdown and updates index.html with fresh content
+ * Also updates content.json for backup/reference
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const CONTENT_FILE = path.join(__dirname, 'CONTENT.md');
+const HTML_FILE = path.join(__dirname, 'index.html');
 const JSON_FILE = path.join(__dirname, 'content.json');
 
-// Read CONTENT.md
-const mdContent = fs.readFileSync(CONTENT_FILE, 'utf-8');
-const lines = mdContent.split('\n');
+try {
+  // Read markdown
+  const mdContent = fs.readFileSync(CONTENT_FILE, 'utf-8');
+  const mdLines = mdContent.split('\n');
+  
+  // Read current HTML
+  let htmlContent = fs.readFileSync(HTML_FILE, 'utf-8');
+  
+  // Load JSON for structure reference
+  const json = JSON.parse(fs.readFileSync(JSON_FILE, 'utf-8'));
+  
+  // Helper: extract value from markdown line
+  const extractMarkdownValue = (mdArray, searchTerm) => {
+    for (let i = 0; i < mdArray.length; i++) {
+      const line = mdArray[i];
+      if (line.includes(searchTerm)) {
+        const match = line.match(/- \*\*[^*]+\*\*:\s*(.+)/);
+        if (match) return match[1].trim();
+      }
+    }
+    return null;
+  };
 
-// Load existing JSON to preserve structure
-const existingJSON = JSON.parse(fs.readFileSync(JSON_FILE, 'utf-8'));
-const output = JSON.parse(JSON.stringify(existingJSON)); // Deep copy
+  // Extract all values from CONTENT.md
+  const eyebrowEN = extractMarkdownValue(mdLines, 'EN Eyebrow');
+  const eyebrowFR = extractMarkdownValue(mdLines, 'FR Eyebrow');
+  const taglineEN = extractMarkdownValue(mdLines, 'EN Tagline');
+  const taglineFR = extractMarkdownValue(mdLines, 'FR Tagline');
+  const availEN = extractMarkdownValue(mdLines, '**EN**:') || 'Open to work';
+  const availFR = extractMarkdownValue(mdLines, '**FR**:') || 'Disponible';
 
-let currentSection = null;
-let currentSubsection = null;
-let currentLang = 'en';
-let i = 0;
+  // Update JSON
+  if (eyebrowEN) json.home.eyebrow.en = eyebrowEN;
+  if (eyebrowFR) json.home.eyebrow.fr = eyebrowFR;
+  if (taglineEN) json.home.tagline.en = taglineEN;
+  if (taglineFR) json.home.tagline.fr = taglineFR;
+  if (availEN) json.availability.en = availEN;
+  if (availFR) json.availability.fr = availFR;
 
-while (i < lines.length) {
-  const line = lines[i].trim();
+  // Update HTML content with data attributes for JS to read
+  htmlContent = htmlContent.replace(
+    /data-en="[^"]*".*?>/g,
+    (match) => {
+      // Only update if we have new values
+      return eyebrowEN ? match.replace(/data-en="[^"]*"/, `data-en="${eyebrowEN.replace(/"/g, '&quot;')}"`) : match;
+    }
+  );
 
-  // Detect language blocks
-  if (line.startsWith('**EN'):')) {
-    currentLang = 'en';
-    i++;
-    continue;
-  }
-  if (line.startsWith('**FR'):')) {
-    currentLang = 'fr';
-    i++;
-    continue;
-  }
+  // Write updated files
+  fs.writeFileSync(JSON_FILE, JSON.stringify(json, null, 2));
+  fs.writeFileSync(HTML_FILE, htmlContent);
 
-  // Eyebrow
-  if (line.includes('EN Eyebrow')) {
-    const nextLine = lines[i + 1].trim();
-    const match = nextLine.match(/- \*\*EN Eyebrow\*\*: (.+)/);
-    if (match) output.home.eyebrow.en = match[1];
-    i += 2;
-    continue;
-  }
-  if (line.includes('FR Eyebrow')) {
-    const nextLine = lines[i + 1].trim();
-    const match = nextLine.match(/- \*\*FR Eyebrow\*\*: (.+)/);
-    if (match) output.home.eyebrow.fr = match[1];
-    i += 2;
-    continue;
-  }
+  console.log('✅ CONTENT.md → HTML + JSON updated successfully!');
+  console.log('📝 Updated eyebrow, tagline, and availability');
+  console.log('🚀 Ready to deploy!');
 
-  // Tagline
-  if (line.includes('EN Tagline')) {
-    const nextLine = lines[i + 1].trim();
-    const match = nextLine.match(/- \*\*EN Tagline\*\*: (.+)/);
-    if (match) output.home.tagline.en = match[1];
-    i += 2;
-    continue;
-  }
-  if (line.includes('FR Tagline')) {
-    const nextLine = lines[i + 1].trim();
-    const match = nextLine.match(/- \*\*FR Tagline\*\*: (.+)/);
-    if (match) output.home.tagline.fr = match[1];
-    i += 2;
-    continue;
-  }
-
-  // Logo
-  if (line.includes('Logo Text')) {
-    const nextLine = lines[i + 1].trim();
-    const match = nextLine.match(/- \*\*Logo Text\*\*: (.+)/);
-    if (match) output.personal.logo_text = match[1];
-    i += 2;
-    continue;
-  }
-
-  // Availability
-  if (line.includes('EN'):') && line.includes('open to work')) {
-    const match = line.match(/- \*\*EN\*\*: (.+)/);
-    if (match) output.availability.en = match[1];
-  }
-  if (line.includes('FR'):') && line.match(/disponible|busy/)) {
-    const match = line.match(/- \*\*FR\*\*: (.+)/);
-    if (match) output.availability.fr = match[1];
-  }
-
-  i++;
+} catch (error) {
+  console.error('❌ Conversion error:', error.message);
+  process.exit(1);
 }
-
-// Write output
-fs.writeFileSync(JSON_FILE, JSON.stringify(output, null, 2));
-console.log('✅ CONTENT.md → content.json conversion complete!');
