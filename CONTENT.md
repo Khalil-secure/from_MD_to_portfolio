@@ -15,10 +15,10 @@
 ## Home Section
 
 ### Short Bio
-- **EN Eyebrow**: Network Engineer
-- **EN Tagline**: DevSecOps · Agentic AI · Cloud Security
-- **FR Eyebrow**: Ingénieur Infrastructure & IA
-- **FR Tagline**: DevSecOps · Agents IA · Sécurité Cloud
+- **EN Eyebrow**: Systeme & Network Engineer
+- **EN Tagline**: DevSecOps · Agentic AI · Cloud 
+- **FR Eyebrow**: Ingénieur systeme & Réseaux
+- **FR Tagline**: DevSecOps · Agents IA ·  Cloud
 
 ### Name
 - **Full Name**: Khalil Ghiati.

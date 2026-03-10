@@ -203,6 +203,8 @@ async function loadContentData() {
     
     // Apply initial language
     applyContent(window.currentLang || 'en');
+    // Initialize certifications with images
+    initCertifications();
     return true;
   } catch (error) {
     console.error('Error loading content:', error);
@@ -301,17 +303,58 @@ function applyContent(lang) {
     if (certDesc) certDesc.textContent = cert.description[t];
   });
 
-  // Regenerate demos with updated language
+  // Update demos with new language
   if (window._demosLoaded) {
     window._demosLoaded = false;
     renderDemosFromData();
   }
+
+  // Regenerate certifications to update descriptions with new language
+  initCertifications();
 }
 
 /**
- * Render demos using content data instead of hardcoded DEMOS array
+ * Render certification cards using content data with proper image handling
  */
-function renderDemosFromData() {
+function renderCertificationsFromData() {
+  if (!CONTENT_DATA) return;
+
+  const lang = window.currentLang || 'en';
+  const certsGrid = document.querySelector('.certs-grid');
+  
+  if (!certsGrid) return;
+
+  certsGrid.innerHTML = '';
+
+  CONTENT_DATA.certifications.certs.forEach(function(cert) {
+    const iconHTML = cert.icon_type === 'image' 
+      ? `<img src="${cert.icon}" alt="${cert.name}" style="width: 80px; height: 80px; object-fit: contain;">`
+      : `<span class="cert-ico">${cert.icon}</span>`;
+
+    const certCard = `
+      <div class="cert-card">
+        <div class="cert-ico-container" style="display: flex; justify-content: center; align-items: center; height: 80px; margin-bottom: 10px;">
+          ${iconHTML}
+        </div>
+        <div class="cert-name">${cert.name}</div>
+        <div class="cert-iss">${cert.issuer}</div>
+        <div class="cert-desc">${cert.description[lang]}</div>
+        <span class="cbadge ${cert.badge_class}">${cert.badge_text}</span>
+      </div>
+    `;
+
+    certsGrid.innerHTML += certCard;
+  });
+}
+
+/**
+ * Render certifications when page loads
+ */
+function initCertifications() {
+  if (CONTENT_DATA) {
+    renderCertificationsFromData();
+  }
+}
   if (!CONTENT_DATA) return;
 
   const lang = window.currentLang || 'en';
@@ -352,7 +395,7 @@ function renderDemosFromData() {
   });
 
   window._demosLoaded = true;
-}
+
 
 /**
  * Override the original setLang function to also apply content
@@ -450,6 +493,9 @@ function applyLanguageOnly(lang) {
     window._demosLoaded = false;
     renderDemosFromData();
   }
+
+  // Regenerate certifications with updated descriptions
+  initCertifications();
 }
 
 /**

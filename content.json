@@ -208,7 +208,8 @@
     },
     "certs": [
       {
-        "icon": "🎓",
+        "icon": "ensil-ensci.png",
+        "icon_type": "image",
         "name": "Engineering Degree",
         "issuer": "ENSIL-ENSCI — Limoges",
         "badge_class": "cbg",
@@ -219,7 +220,8 @@
         }
       },
       {
-        "icon": "🎯",
+        "icon": "tryhackme.png",
+        "icon_type": "image",
         "name": "SOC Level 1",
         "issuer": "TryHackMe",
         "badge_class": "cbg",
@@ -230,7 +232,8 @@
         }
       },
       {
-        "icon": "🔓",
+        "icon": "tryhackme.png",
+        "icon_type": "image",
         "name": "Jr Penetration Tester",
         "issuer": "TryHackMe",
         "badge_class": "cbb",
@@ -241,7 +244,8 @@
         }
       },
       {
-        "icon": "☁️",
+        "icon": "azure logo.jfif",
+        "icon_type": "image",
         "name": "Azure Fundamentals",
         "issuer": "Microsoft — AZ-900",
         "badge_class": "cbb",
@@ -252,7 +256,8 @@
         }
       },
       {
-        "icon": "⚔️",
+        "icon": "root_me.png",
+        "icon_type": "image",
         "name": "Root-Me 100+",
         "issuer": "Root-Me.org",
         "badge_class": "cbo",
