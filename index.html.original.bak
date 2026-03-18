@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khalil Ghiati — Portfolio</title>
+<title>Khalil Ghiati — AI Infrastructure Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -188,27 +188,27 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 <body>
 
 <div class="top-bar">
-  <div class="logo" id="logo"></div>
+  <div class="logo">khalil<em>.sec</em></div>
   <nav>
     <button class="nav-btn active" onclick="show('home',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span id="nav-txt-home"></span>
+      <span id="nav-txt-home">Home</span>
     </button>
     <button class="nav-btn" onclick="show('experience',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-      <span id="nav-txt-exp"></span>
+      <span id="nav-txt-exp">Experience</span>
     </button>
     <button class="nav-btn" onclick="show('projects',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      <span id="nav-txt-proj"></span>
+      <span id="nav-txt-proj">Projects</span>
     </button>
     <button class="nav-btn" onclick="show('certifications',this)">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-      <span id="nav-txt-cert"></span>
+      <span id="nav-txt-cert">Certs</span>
     </button>
   </nav>
   <div class="top-right">
-    <div class="avail"><span class="avail-dot"></span><span id="avail-txt"></span></div>
+    <div class="avail"><span class="avail-dot"></span><span id="avail-txt" data-editable>open to work</span></div>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
       <button class="lang-btn" onclick="setLang('fr',this)">FR</button>
@@ -220,11 +220,25 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 <div class="page-box">
 <main>
 
-<!-- HOME -->
 <section id="home" class="section active">
-  <div class="home-left" id="home-left"></div>
+  <div class="home-left">
+    <p class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrow-txt" data-editable>Network Engineer </span></p>
+    <h1 class="name"><span style="display:block">Khalil</span><span class="acc">Ghiati.</span></h1>
+    <p class="tagline" id="tagline-txt" data-editable> AI · DevSecOps</p>
+    <p class="desc" id="desc-txt" data-editable>Engineering graduate specialised in <strong>Networking AI-driven infrastructure</strong> and <strong>cybersecurity</strong>. I build systems where <strong>AI is a first-class infrastructure component</strong> — not a plugin. From <strong>5G telecom at Bouygues</strong> to <strong>LLM agents monitoring production Docker environments</strong>.</p>
+    <div class="socials">
+      <a href="https://github.com/Khalil-secure" target="_blank" class="soc">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+      <a href="https://www.linkedin.com/in/mohamed-ghiati-khalil/" target="_blank" class="soc">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+      <a href="mailto:medkhalilghiati@gmail.com" class="soc">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+      <a href="khalil-ghiati-cv-fr.pdf" class="soc">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Resume</a>
+    </div>
+  </div>
   <div class="home-right">
-    <p class="stack-label" id="stack-label-txt"></p>
+    <p class="stack-label" id="stack-label-txt" data-editable>Tool stack</p>
     <div class="stack-groups">
       <div class="stack-group">
         <div class="group-title">AI &amp; Automation</div>
@@ -275,47 +289,85 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" class="section">
   <div class="exp-wrap">
-    <h2 class="sec-title" id="exp-title"></h2>
-    <p class="sec-sub" id="exp-sub"></p>
-    <div class="timeline" id="exp-timeline"></div>
+    <h2 class="sec-title" id="exp-title" data-editable>Where I've <span class="acc">shipped.</span></h2>
+    <p class="sec-sub" id="exp-sub" data-editable>// real work · real impact · production systems</p>
+    <div class="timeline">
+      <div class="exp-card">
+        <div class="exp-top"><div class="exp-co">Bouygues Telecom</div><div class="exp-period">Sept 2024 — Sept 2025</div></div>
+        <div class="exp-role" id="role-0">Telecom Project Manager</div>
+        <div class="exp-loc">Lyon, France</div>
+        <ul class="exp-list" id="bullets-0">
+          <li>Automated data collection across <strong>300+ telecom sites</strong> via APIs — <strong>+90% efficiency gain</strong></li>
+          <li>Managed <strong>4 major projects</strong> end-to-end with full stakeholder reporting</li>
+          <li><strong>5G infrastructure security analysis</strong> aligned with ANSSI recommendations</li>
+          <li>Cross-functional coordination with AI-based operational optimisation</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag tag-proto">5G</span><span class="exp-tag tag-proto">LTE</span><span class="exp-tag tag-proto">FTTH</span><span class="exp-tag tag-sec">ANSSI</span><span class="exp-tag tag-lang">Python</span><span class="exp-tag tag-infra">REST API</span></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-top"><div class="exp-co">CogniScan (Start-up)</div><div class="exp-period">Apr 2024 — Aug 2024</div></div>
+        <div class="exp-role" id="role-1">ML Engineer &amp; Project Manager</div>
+        <div class="exp-loc">Limoges, France</div>
+        <ul class="exp-list" id="bullets-1">
+          <li>Interactive data visualisation tools (Python, Dash, Plotly)</li>
+          <li>Optimised <strong>CNN architectures</strong> for anomaly detection on medical imaging</li>
+          <li>Signal processing algorithms for biological signature extraction</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag tag-lang">Python</span><span class="exp-tag tag-ml">PyTorch</span><span class="exp-tag tag-ml">TensorFlow</span><span class="exp-tag tag-ml">Matlab</span></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-top"><div class="exp-co">ETEX Group</div><div class="exp-period">Jun 2023 — Aug 2023</div></div>
+        <div class="exp-role" id="role-2">Assistant Regional IT Infrastructure Manager</div>
+        <div class="exp-loc">Avignon, France</div>
+        <ul class="exp-list" id="bullets-2">
+          <li>Deployed <strong>Centreon</strong> monitoring across <strong>1 200+ endpoints</strong> in Western Europe</li>
+          <li><strong>VMware to Hyper-V</strong> server migration with full monitoring integration</li>
+          <li>Linux hardening per <strong>CIS benchmarks</strong> and ANSSI (SSH, firewall, patching)</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag tag-infra">Linux</span><span class="exp-tag tag-infra">Docker</span><span class="exp-tag tag-infra">Centreon</span><span class="exp-tag tag-infra">Hyper-V</span><span class="exp-tag tag-lang">Bash</span><span class="exp-tag tag-sec">CIS</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section">
   <div class="proj-wrap">
-    <h2 class="sec-title" id="proj-title"></h2>
+    <h2 class="sec-title" id="proj-title" data-editable>Built, broken, <span class="acc">documented.</span></h2>
     <div class="proj-toggle">
       <button class="toggle-btn active" id="btn-code" onclick="switchProj('code')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        <span id="btn-code-txt"></span>
+        <span id="btn-code-txt" data-editable>Coding Projects</span>
       </button>
       <button class="toggle-btn t-demo" id="btn-demo" onclick="switchProj('demo')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        <span id="btn-demo-txt"></span>
+        <span id="btn-demo-txt" data-editable>Live Demos</span>
       </button>
     </div>
     <div id="view-code">
-      <p class="proj-subtitle" id="proj-sub-code"></p>
+      <p class="proj-subtitle" id="proj-sub-code" data-editable>Public repos · fetched live from GitHub · click to open</p>
       <div id="proj-grid" class="proj-grid"><div class="spin-wrap"><div class="spinner"></div><span>Fetching repos...</span></div></div>
-      <button id="load-more-btn" class="load-more" style="display:none" onclick="loadMore()"></button>
+      <button id="load-more-btn" class="load-more" style="display:none" onclick="loadMore()" data-editable>load more</button>
     </div>
     <div id="view-demo" style="display:none">
-      <p class="proj-subtitle" id="proj-sub-demo"></p>
+      <p class="proj-subtitle" id="proj-sub-demo">Live demos · GIF walkthroughs · click to view on GitHub</p>
       <div class="demos-grid" id="demos-grid"></div>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications" class="section">
   <div class="certs-wrap">
-    <h2 class="sec-title" id="cert-title"></h2>
-    <p class="sec-sub" id="cert-sub"></p>
-    <div class="certs-grid" id="certs-grid"></div>
+    <h2 class="sec-title" id="cert-title" data-editable>Credentials &amp; <span class="acc">Training.</span></h2>
+    <p class="sec-sub" id="cert-sub" data-editable>// certifications · formation · active learning</p>
+    <div class="certs-grid">
+      <div class="cert-card"><span class="cert-ico">🎓</span><div class="cert-name">Engineering Degree</div><div class="cert-iss">ENSIL-ENSCI — Limoges</div><div class="cert-desc" id="cert-desc-0">Electronics &amp; Telecommunications · 2022–2026. Infrastructure &amp; Security.</div><span class="cbadge cbg">Obtained</span></div>
+      <div class="cert-card"><span class="cert-ico">🎯</span><div class="cert-name">SOC Level 1</div><div class="cert-iss">TryHackMe</div><div class="cert-desc" id="cert-desc-1">Blue team operations, threat detection and incident response.</div><span class="cbadge cbg">Certified</span></div>
+      <div class="cert-card"><span class="cert-ico">🔓</span><div class="cert-name">Jr Penetration Tester</div><div class="cert-iss">TryHackMe</div><div class="cert-desc" id="cert-desc-2">Web exploitation, network pentesting, privilege escalation.</div><span class="cbadge cbb">Completed</span></div>
+      <div class="cert-card"><span class="cert-ico">☁️</span><div class="cert-name">Azure Fundamentals</div><div class="cert-iss">Microsoft — AZ-900</div><div class="cert-desc" id="cert-desc-3">Cloud foundations — Azure services, security, compliance.</div><span class="cbadge cbb">Certified</span></div>
+      <div class="cert-card"><span class="cert-ico">⚔️</span><div class="cert-name">Root-Me 100+</div><div class="cert-iss">Root-Me.org</div><div class="cert-desc" id="cert-desc-4">100+ CTF challenges — web, crypto, network, system exploitation.</div><span class="cbadge cbo">Active</span></div>
+    </div>
   </div>
 </section>
 
@@ -399,10 +451,110 @@ function renderRepos() {
 
 function loadMore() { renderRepos(); }
 
+// ── Demos
+var DEMOS = [
+  {title:'AII — AI as Infrastructure', desc_en:'A LangGraph agent monitors Docker in real time, detects incidents, diagnoses root causes via Claude, and proposes corrective actions through a human trust layer. Zero tokens spent when everything is nominal.', desc_fr:'Un agent LangGraph supervise Docker en temps réel, détecte les incidents, diagnostique les causes via Claude et propose des actions correctives via une couche de confiance humaine. Zéro token dépensé quand tout est nominal.', badge:'badge-ai', badgeLabel:'AI · DevSecOps', stack:['Python','LangGraph','Claude API','ChromaDB','Docker'], gif:'https://raw.githubusercontent.com/Khalil-secure/AI_as_infrastructure/main/AI_as_infrastructure_demo.gif', repo:'https://github.com/Khalil-secure/AI_as_infrastructure'},
+  {title:'MailGuard — Gmail & Outlook', desc_en:'Browser extension that scans incoming emails in real time, detects phishing attempts, suspicious links, and social engineering patterns before you click anything.', desc_fr:'Extension navigateur qui analyse les emails entrants en temps réel, détecte les tentatives de phishing, liens suspects et patterns d\'ingénierie sociale avant tout clic.', badge:'badge-sec', badgeLabel:'Security · Browser', stack:['JavaScript','Chrome API','NLP','Phishing Detection'], gif:'https://raw.githubusercontent.com/Khalil-secure/Mailguard_extension_preview/main/screenshots/Mailguard_alt_preview.gif', repo:'https://github.com/Khalil-secure/Mailguard_extension_preview'},
+  {title:'MailGuard Alternative', desc_en:'Lightweight alternative version of MailGuard with a different UI approach and extended detection rules for business email compromise and spoofed sender addresses.', desc_fr:'Version alternative allégée de MailGuard avec une approche UI différente et des règles de détection étendues pour la compromission d\'emails professionnels et les expéditeurs usurpés.', badge:'badge-sec', badgeLabel:'Security · Email', stack:['JavaScript','Chrome API','Pattern Matching','Security'], gif:'https://raw.githubusercontent.com/Khalil-secure/MailGuard_alternative/main/screenvideo/Mailguard_alt_preview.gif', repo:'https://github.com/Khalil-secure/MailGuard_alternative'},
+];
+
+function renderDemos() {
+  var lang = window.currentLang || 'en';
+  var gifSoon = lang === 'fr' ? 'GIF bientôt disponible' : 'GIF coming soon';
+  var grid = document.getElementById('demos-grid');
+  grid.innerHTML = '';
+  DEMOS.forEach(function(d) {
+    var desc = lang === 'fr' ? d.desc_fr : d.desc_en;
+    var thumb = d.gif ? '<img src="' + d.gif + '" alt="' + d.title + '" loading="lazy">' : '<div class="demo-thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>' + gifSoon + '</span></div>';
+    var tags = d.stack.map(function(t){ return '<span class="demo-tag">' + t + '</span>'; }).join('');
+    var ghBtn = d.repo ? '<a href="' + d.repo + '" target="_blank" class="demo-link demo-link-gh">GitHub</a>' : '';
+    grid.innerHTML += '<div class="demo-card"><div class="demo-thumb">' + thumb + '<span class="demo-badge ' + d.badge + '">' + d.badgeLabel + '</span>' + (d.repo ? '<a href="' + d.repo + '" target="_blank" class="demo-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></a>' : '') + '</div><div class="demo-body"><div class="demo-title">' + d.title + '</div><div class="demo-desc">' + desc + '</div><div class="demo-stack">' + tags + '</div><div class="demo-links">' + ghBtn + '</div></div></div>';
+  });
+  window._demosLoaded = true;
+}
+
+// ── Language
 window.currentLang = 'en';
-// renderDemos and setLang are defined in loadContent.js
+
+var T = {
+  en: {
+    avail:'open to work', eyebrow:'AI Infrastructure Engineer', tagline:'DevSecOps · AI Agents · Cloud Security',
+    desc:'Engineering graduate specialised in <strong>AI-driven infrastructure</strong> and <strong>cybersecurity</strong>. I build systems where <strong>AI is a first-class infrastructure component</strong> — not a plugin. From <strong>5G telecom at Bouygues</strong> to <strong>LLM agents monitoring production Docker environments</strong>.',
+    stack_label:'Tool stack',
+    exp_title:'Where I\'ve <span class="acc">shipped.</span>', exp_sub:'// real work · real impact · production systems',
+    proj_title:'Built, broken, <span class="acc">documented.</span>',
+    btn_code:'Coding Projects', btn_demo:'Live Demos',
+    proj_sub_code:'Public repos · fetched live from GitHub · click to open',
+    proj_sub_demo:'Live demos · GIF walkthroughs · click to view on GitHub',
+    load_more:'load more',
+    cert_title:'Credentials &amp; <span class="acc">Training.</span>', cert_sub:'// certifications · formation · active learning',
+    roles:['Telecom Project Manager','ML Engineer & Project Manager','Assistant Regional IT Infrastructure Manager'],
+    bullets:[
+      ['Automated data collection across <strong>300+ telecom sites</strong> via APIs — <strong>+90% efficiency gain</strong>','Managed <strong>4 major projects</strong> end-to-end with full stakeholder reporting','<strong>5G infrastructure security analysis</strong> aligned with ANSSI recommendations','Cross-functional coordination with AI-based operational optimisation'],
+      ['Interactive data visualisation tools (Python, Dash, Plotly)','Optimised <strong>CNN architectures</strong> for anomaly detection on medical imaging','Signal processing algorithms for biological signature extraction'],
+      ['Deployed <strong>Centreon</strong> monitoring across <strong>1 200+ endpoints</strong> in Western Europe','<strong>VMware to Hyper-V</strong> server migration with full monitoring integration','Linux hardening per <strong>CIS benchmarks</strong> and ANSSI (SSH, firewall, patching)']
+    ],
+    cert_descs:['Electronics & Telecommunications · 2022-2026. Infrastructure & Security.','Blue team operations, threat detection and incident response.','Web exploitation, network pentesting, privilege escalation.','Cloud foundations — Azure services, security, compliance.','100+ CTF challenges — web, crypto, network, system exploitation.']
+  },
+  fr: {
+    avail:'disponible', eyebrow:'Ingénieur Infrastructure & IA', tagline:'DevSecOps · Agents IA · Sécurité Cloud',
+    desc:'Ingénieur spécialisé en <strong>infrastructure pilotée par IA</strong> et <strong>cybersécurité</strong>. Je construis des systèmes où <strong>l\'IA est un composant d\'infrastructure de premier plan</strong> — pas un plugin. Du <strong>5G chez Bouygues Telecom</strong> aux <strong>agents LLM qui supervisent des environnements Docker en production</strong>.',
+    stack_label:'Stack technique',
+    exp_title:'Où j\'ai <span class="acc">livré.</span>', exp_sub:'// vrai travail · vrai impact · systèmes en production',
+    proj_title:'Construit, cassé, <span class="acc">documenté.</span>',
+    btn_code:'Projets Code', btn_demo:'Démos Live',
+    proj_sub_code:'Repos publics · récupérés en direct depuis GitHub · cliquer pour ouvrir',
+    proj_sub_demo:'Démos live · walkthroughs GIF · cliquer pour voir sur GitHub',
+    load_more:'voir plus',
+    cert_title:'Diplômes &amp; <span class="acc">Formation.</span>', cert_sub:'// certifications · formation · apprentissage actif',
+    roles:['Chef de Projet Télécom','Ingénieur ML & Chef de Projet','Assistant Responsable Infrastructure IT Régional'],
+    bullets:[
+      ['Automatisation de la collecte de données sur <strong>300+ sites télécom</strong> via APIs — <strong>+90% de gain d\'efficacité</strong>','Gestion de <strong>4 projets majeurs</strong> de bout en bout avec reporting complet','<strong>Analyse sécurité infrastructure 5G</strong> alignée sur les recommandations ANSSI','Coordination transverse avec optimisation opérationnelle basée sur l\'IA'],
+      ['Outils de visualisation de données interactifs (Python, Dash, Plotly)','Optimisation d\'<strong>architectures CNN</strong> pour la détection d\'anomalies sur imagerie médicale','Algorithmes de traitement du signal pour l\'extraction de signatures biologiques'],
+      ['Déploiement de la supervision <strong>Centreon</strong> sur <strong>1 200+ endpoints</strong> en Europe de l\'Ouest','Migration serveurs <strong>VMware vers Hyper-V</strong> avec intégration complète du monitoring','Durcissement Linux selon <strong>référentiels CIS</strong> et ANSSI (SSH, pare-feu, correctifs)']
+    ],
+    cert_descs:['Electronique & Télécommunications · 2022-2026. Infrastructure & Sécurité.','Opérations Blue Team, détection de menaces et réponse aux incidents.','Exploitation web, pentest réseau, élévation de privilèges.','Fondamentaux cloud — services Azure, sécurité, conformité.','100+ challenges CTF — web, crypto, réseau, exploitation système.']
+  }
+};
+
+function setLang(lang, btn) {
+  window.currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var t = T[lang];
+  document.getElementById('avail-txt').textContent = t.avail;
+  document.getElementById('eyebrow-txt').textContent = t.eyebrow;
+  document.getElementById('tagline-txt').textContent = t.tagline;
+  document.getElementById('desc-txt').innerHTML = t.desc;
+  document.getElementById('stack-label-txt').textContent = t.stack_label;
+  document.getElementById('exp-title').innerHTML = t.exp_title;
+  document.getElementById('exp-sub').textContent = t.exp_sub;
+  document.getElementById('proj-title').innerHTML = t.proj_title;
+  document.getElementById('btn-code-txt').textContent = t.btn_code;
+  document.getElementById('btn-demo-txt').textContent = t.btn_demo;
+  document.getElementById('proj-sub-code').textContent = t.proj_sub_code;
+  document.getElementById('proj-sub-demo').textContent = t.proj_sub_demo;
+  document.getElementById('load-more-btn').textContent = t.load_more;
+  document.getElementById('cert-title').innerHTML = t.cert_title;
+  document.getElementById('cert-sub').textContent = t.cert_sub;
+  for (var i = 0; i < 3; i++) {
+    document.getElementById('role-' + i).textContent = t.roles[i];
+    var ul = document.getElementById('bullets-' + i);
+    var lis = ul.querySelectorAll('li');
+    lis.forEach(function(li, j){ if (t.bullets[i][j]) li.innerHTML = t.bullets[i][j]; });
+  }
+  for (var k = 0; k < 5; k++) {
+    document.getElementById('cert-desc-' + k).textContent = t.cert_descs[k];
+  }
+  if (window._demosLoaded) {
+    window._demosLoaded = false;
+    renderDemos();
+  }
+  document.documentElement.lang = lang;
+}
 </script>
 
+<!-- Load portfolio content dynamically from JSON -->
 <script src="loadContent.js"></script>
 </body>
 </html>

@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "builds": [
+  "headers": [
     {
-      "src": "index.html",
-      "use": "@vercel/static"
+      "source": "/content.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
+        { "key": "Pragma", "value": "no-cache" }
+      ]
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/content.json", "dest": "/content.json" },
+    { "src": "/loadContent.js", "dest": "/loadContent.js" },
+    { "src": "/(.*\\.(js|css|json|png|jpg|jfif|pdf|gif|svg|ico))", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

@@ -179,7 +179,7 @@ Version alternative allégée de MailGuard avec une approche UI différente et d
 - **FR Subtitle**: // certifications · formation · apprentissage actif
 
 ### Certification #1: Engineering Degree
-- **Icon**: 🎓
+- **Icon**: ensil-ensci.png
 - **Name**: Engineering Degree
 - **Issuer**: ENSIL-ENSCI — Limoges
 - **Status Badge**: Obtained (green)
@@ -187,7 +187,7 @@ Version alternative allégée de MailGuard avec une approche UI différente et d
 - **FR Description**: Electronique & Télécommunications · 2022-2026. Infrastructure & Sécurité.
 
 ### Certification #2: SOC Level 1
-- **Icon**: 🎯
+- **Icon**: tryhackme.png
 - **Name**: SOC Level 1
 - **Issuer**: TryHackMe
 - **Status Badge**: Certified (green)
@@ -195,7 +195,7 @@ Version alternative allégée de MailGuard avec une approche UI différente et d
 - **FR Description**: Opérations Blue Team, détection de menaces et réponse aux incidents.
 
 ### Certification #3: Jr Penetration Tester
-- **Icon**: 🔓
+- **Icon**: tryhackme.png
 - **Name**: Jr Penetration Tester
 - **Issuer**: TryHackMe
 - **Status Badge**: Completed (blue)
@@ -203,7 +203,7 @@ Version alternative allégée de MailGuard avec une approche UI différente et d
 - **FR Description**: Exploitation web, pentest réseau, élévation de privilèges.
 
 ### Certification #4: Azure Fundamentals
-- **Icon**: ☁️
+- **Icon**: azure logo.jfif
 - **Name**: Azure Fundamentals
 - **Issuer**: Microsoft — AZ-900
 - **Status Badge**: Certified (blue)
@@ -211,7 +211,7 @@ Version alternative allégée de MailGuard avec une approche UI différente et d
 - **FR Description**: Fondamentaux cloud — services Azure, sécurité, conformité.
 
 ### Certification #5: Root-Me 100+
-- **Icon**: ⚔️
+- **Icon**: root_me.png
 - **Name**: Root-Me 100+
 - **Issuer**: Root-Me.org
 - **Status Badge**: Active (orange)
