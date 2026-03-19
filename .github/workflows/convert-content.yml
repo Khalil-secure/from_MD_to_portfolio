@@ -11,41 +11,23 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   convert:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Run converter
-        run: node convert.js
-
-      - name: Check for changes
-        id: verify-changed-files
+      - name: Checkout, convert, and push
         run: |
+          git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" repo
+          cd repo
+          git checkout ${{ github.ref_name }}
+          node convert.js
           if git diff --quiet; then
-            echo "No changes detected"
-            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
           else
-            echo "Changes detected"
-            echo "changed=true" >> $GITHUB_OUTPUT
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git add content.json
+            git commit -m "🤖 Auto: Update content.json from CONTENT.md"
+            git push
           fi
-
-      - name: Commit and push
-        if: steps.verify-changed-files.outputs.changed == 'true'
-        run: |
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git add content.json
-          git commit -m "🤖 Auto: Update content.json from CONTENT.md"
-          git push
