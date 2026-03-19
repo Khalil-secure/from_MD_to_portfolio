@@ -3,7 +3,7 @@
 ## Personal Information
  
 ### Logo
-- **Logo Text**: test
+- **Logo Text**: Khalil
 - **Logo Suffix**: .sec
  
 ### Availability Status  
