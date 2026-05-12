@@ -51,8 +51,8 @@
 ### Experience #1
 - **Company**: Bouygues Telecom
 - **Period**: Sept 2024 — Sept 2025
-- **EN Role**: Telecom Project Manager
-- **FR Role**: Chef de Projet Télécom
+- **EN Role**: Support engineer
+- **FR Role**: ingénieur support
 - **Location**: Lyon, France
 - **Tags**: 5G, LTE, FTTH, ANSSI, Python, REST API
 
