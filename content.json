@@ -72,7 +72,7 @@
         ],
         "bullets": {
           "en": [
-            "Architected and deployed the company's internal information system and web infrastructure with <strong>near-SIEM supervision tools</strong>",
+            "Architected and deployed the company's internal information system and web infrastructure with <strong>SIEM supervision tools</strong>",
             "Implemented <strong>Splunk SIEM</strong> for centralised multi-source log analysis enabling early threat detection",
             "Investigated and resolved critical incidents <strong>on-call 24/7</strong>, maintaining uptime in line with defined SLAs"
           ],
