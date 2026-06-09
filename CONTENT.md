@@ -25,9 +25,9 @@
 - **Accent Part**: Ghiati. (styled in italics)
  
 ### Full Description
-**EN**: Engineering graduate specialised in **cybersecurity** and **AI-driven infrastructure**. I investigate security incidents, triage alerts, and build systems where **AI enhances threat detection** — not just as a plugin, but as a core component. From **5G telecom at Bouygues** to **SOC operations and LLM agents monitoring production environments**.
+**EN**: Engineering graduate specialised in **cybersecurity** and **AI-driven infrastructure**. I investigate security incidents, triage alerts, and build systems where **AI enhances threat detection** , not just as a plugin, but as a core component.
  
-**FR**: Ingénieur spécialisé en **cybersécurité** et **infrastructure pilotée par IA**. J'analyse les incidents de sécurité, trie les alertes et construis des systèmes où **l'IA renforce la détection des menaces** — pas comme un plugin, mais comme un composant central. Du **5G chez Bouygues Telecom** aux **opérations SOC et agents LLM supervisant des environnements en production**.
+**FR**: Ingénieur spécialisé en **cybersécurité** et **infrastructure pilotée par IA**. J'analyse les incidents de sécurité, trie les alertes et construis des systèmes où **l'IA renforce la détection des menaces** , pas comme un plugin, mais comme un composant central.
 
 ### Social Links
 - **GitHub**: https://github.com/Khalil-secure
@@ -49,6 +49,24 @@
 - **FR Subtitle**: // vrai travail · vrai impact · systèmes en production
 
 ### Experience #1
+- **Company**: Morocco ShipIt
+- **Period**: Sept 2025 — aujourd'hui
+- **EN Role**: On-Call Systems & Network Administrator
+- **FR Role**: Administrateur Systèmes & Réseaux On-Call
+- **Location**: Remote
+- **Tags**: Splunk, SIEM, Linux, Networking, SLA, Incident Response
+
+**EN Bullets**:
+- Architected and deployed the company's internal information system and web infrastructure with **near-SIEM supervision tools**
+- Implemented **Splunk SIEM** for centralised multi-source log analysis enabling early threat detection
+- Investigated and resolved critical incidents **on-call 24/7**, maintaining uptime in line with defined SLAs
+
+**FR Bullets**:
+- Architecturé et déployé le système d'information interne et l'infrastructure web avec des outils de supervision proches de **SIEM**
+- Implémenté un **SIEM Splunk** pour la centralisation et l'analyse proactive de logs multi-sources, permettant la détection précoce des menaces
+- Investigué et résolu des incidents critiques en astreinte **24/7**, assurant un taux de disponibilité conforme aux SLA définis
+
+### Experience #2
 - **Company**: Bouygues Telecom
 - **Period**: Sept 2024 — Sept 2025
 - **EN Role**: Support engineer
@@ -68,7 +86,7 @@
 - **Analyse sécurité infrastructure 5G** alignée sur les recommandations ANSSI
 - Coordination transverse avec optimisation opérationnelle basée sur l'IA
 
-### Experience #2
+### Experience #3
 - **Company**: CogniScan (Start-up)
 - **Period**: Apr 2024 — Aug 2024
 - **EN Role**: ML Engineer & Project Manager
@@ -86,7 +104,7 @@
 - Optimisation d'**architectures CNN** pour la détection d'anomalies sur imagerie médicale
 - Algorithmes de traitement du signal pour l'extraction de signatures biologiques
 
-### Experience #3
+### Experience #4
 - **Company**: ETEX Group
 - **Period**: Jun 2023 — Aug 2023
 - **EN Role**: Assistant Regional IT Infrastructure Manager
