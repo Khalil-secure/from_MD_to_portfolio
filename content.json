@@ -16,7 +16,7 @@
       "en": "Cybersecurity · DevSecOps · Agentic AI",
       "fr": "Cybersécurité · DevSecOps · Agents IA"
     },
-    "name": "Khalil",
+    "name": "M. Khalil",
     "name_accent": "Ghiati.",
     "description": {
       "en": "Engineering graduate specialised in <strong>cybersecurity</strong> and <strong>AI-driven infrastructure</strong>. I investigate security incidents, triage alerts, and build systems where <strong>AI enhances threat detection</strong> — not just as a plugin, but as a core component. From <strong>5G telecom at Bouygues</strong> to <strong>SOC operations and LLM agents monitoring production environments</strong>.",
@@ -177,7 +177,13 @@
         "title": "SOC Incident Report — Akira Ransomware",
         "badge": "badge-sec",
         "badge_label": "SOC · Blue Team",
-        "stack": ["Splunk", "Wireshark", "SIEM", "Threat Hunting", "Incident Response"],
+        "stack": [
+          "Splunk",
+          "Wireshark",
+          "SIEM",
+          "Threat Hunting",
+          "Incident Response"
+        ],
         "repo": "https://github.com/Khalil-secure/SOC-Incident-Report-Akira-Ransomware",
         "pdf": "https://raw.githubusercontent.com/Khalil-secure/SOC-Incident-Report-Akira-Ransomware/main/TryHackMe-Incidents/SOC_Incident_Report_Redacted_EN_FR.pdf",
         "description": {
@@ -189,7 +195,13 @@
         "title": "CTF Buddy",
         "badge": "badge-ai",
         "badge_label": "AI · CTF",
-        "stack": ["Python", "Claude API", "Root-Me", "CTF", "Security"],
+        "stack": [
+          "Python",
+          "Claude API",
+          "Root-Me",
+          "CTF",
+          "Security"
+        ],
         "repo": "https://github.com/Khalil-secure/CTF_buddy",
         "gif": "https://raw.githubusercontent.com/Khalil-secure/CTF_buddy/main/CTF_buddy.gif",
         "description": {
@@ -201,7 +213,13 @@
         "title": "Cyberdeck Shield",
         "badge": "badge-infra",
         "badge_label": "Security · Honeypot",
-        "stack": ["Python", "Docker", "Honeypot", "AI Agents", "Network Security"],
+        "stack": [
+          "Python",
+          "Docker",
+          "Honeypot",
+          "AI Agents",
+          "Network Security"
+        ],
         "repo": "https://github.com/Khalil-secure/cyberdeck-shield",
         "gif": "https://raw.githubusercontent.com/Khalil-secure/cyberdeck-shield/main/demo_cyberdeck_shield-ezgif.com-video-to-gif-converter%20(1).gif",
         "description": {
