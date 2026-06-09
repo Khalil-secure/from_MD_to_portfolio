@@ -61,7 +61,7 @@ function renderAll(lang) {
 
 function renderLogo() {
   var el = document.getElementById('logo');
-  if (el) el.innerHTML = CONTENT_DATA.personal.logo_text + '<em>' + CONTENT_DATA.personal.logo_suffix + '</em>';
+  if (el) el.innerHTML = '<img src="khalil_sec_favicon.svg" class="logo-icon" alt="">' + CONTENT_DATA.personal.logo_text + '<em>' + CONTENT_DATA.personal.logo_suffix + '</em>';
 }
 
 function renderNav(lang) {
