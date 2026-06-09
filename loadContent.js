@@ -175,7 +175,7 @@ function renderCertifications(lang) {
 
   grid.innerHTML = c.certs.map(function(cert) {
     var iconHtml = cert.icon_type === 'image'
-      ? '<div class="cert-ico-container"><img src="' + cert.icon + '" alt="' + cert.name + '" style="width:80px;height:80px;object-fit:contain"></div>'
+      ? '<div class="cert-ico-container"><img src="' + cert.icon + '" alt="' + cert.name + '" style="width:100%;height:100%;object-fit:contain;display:block;padding:8px"></div>'
       : '<span class="cert-ico">' + cert.icon + '</span>';
 
     var credlyHtml = cert.credly_badge_id
@@ -203,10 +203,28 @@ function renderDemos() {
 
   grid.innerHTML = CONTENT_DATA.projects.demos.map(function(d) {
     var desc = d.description[t];
+    var tags = d.stack.map(function(s) { return '<span class="demo-tag">' + s + '</span>'; }).join('');
+
+    if (d.pdf) {
+      // PDF embed card — not wrapped in <a> so iframe stays interactive
+      var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(d.pdf) + '&embedded=true';
+      var ghBtn = d.repo ? '<a href="' + d.repo + '" target="_blank" rel="noreferrer" class="demo-link demo-link-gh">GitHub ↗</a>' : '';
+      var pdfBtn = '<a href="' + d.pdf + '" target="_blank" rel="noreferrer" class="demo-link demo-link-live">View PDF ↗</a>';
+      return '<div class="demo-card demo-card--pdf">' +
+        '<div class="demo-thumb"><iframe src="' + viewerUrl + '" class="demo-pdf-frame" title="' + d.title + '" loading="lazy"></iframe>' +
+        '<span class="demo-badge ' + d.badge + '">' + d.badge_label + '</span></div>' +
+        '<div class="demo-body">' +
+          '<div class="demo-title">' + d.title + '</div>' +
+          '<div class="demo-desc">' + desc + '</div>' +
+          '<div class="demo-stack">' + tags + '</div>' +
+          '<div class="demo-links">' + ghBtn + pdfBtn + '</div>' +
+        '</div>' +
+        '</div>';
+    }
+
     var thumb = d.gif
       ? '<img src="' + d.gif + '" alt="' + d.title + '" loading="lazy">'
       : '<div class="demo-thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>' + gifSoon + '</span></div>';
-    var tags = d.stack.map(function(s) { return '<span class="demo-tag">' + s + '</span>'; }).join('');
     var ghBtn = d.repo ? '<span class="demo-link demo-link-gh">GitHub ↗</span>' : '';
     var playBtn = '<div class="demo-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>';
     var href = d.repo || '#';

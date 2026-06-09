@@ -21,7 +21,7 @@
 - **FR Tagline**: Cybersécurité · DevSecOps · Agents IA
  
 ### Name
-- **Full Name**: Khalil Ghiati.
+- **Full Name**: M. Khalil Ghiati.
 - **Accent Part**: Ghiati. (styled in italics)
  
 ### Full Description

@@ -174,6 +174,42 @@
     },
     "demos": [
       {
+        "title": "SOC Incident Report — Akira Ransomware",
+        "badge": "badge-sec",
+        "badge_label": "SOC · Blue Team",
+        "stack": ["Splunk", "Wireshark", "SIEM", "Threat Hunting", "Incident Response"],
+        "repo": "https://github.com/Khalil-secure/SOC-Incident-Report-Akira-Ransomware",
+        "pdf": "https://raw.githubusercontent.com/Khalil-secure/SOC-Incident-Report-Akira-Ransomware/main/TryHackMe-Incidents/SOC_Incident_Report_Redacted_EN_FR.pdf",
+        "description": {
+          "en": "Full incident response report for an Akira ransomware & Linux compromise scenario (TryHackMe SAL1). Covers detection, IOC analysis, containment and post-incident recommendations — bilingual EN/FR.",
+          "fr": "Rapport complet de réponse à incident pour un scénario de ransomware Akira & compromission Linux (TryHackMe SAL1). Couvre la détection, l'analyse des IOC, le confinement et les recommandations post-incident — bilingue FR/EN."
+        }
+      },
+      {
+        "title": "CTF Buddy",
+        "badge": "badge-ai",
+        "badge_label": "AI · CTF",
+        "stack": ["Python", "Claude API", "Root-Me", "CTF", "Security"],
+        "repo": "https://github.com/Khalil-secure/CTF_buddy",
+        "gif": "https://raw.githubusercontent.com/Khalil-secure/CTF_buddy/main/CTF_buddy.gif",
+        "description": {
+          "en": "AI assistant trained on Root-Me challenges that gives you the right tools to capture the flag — hint progression, crypto, web, reverse engineering and more without spoiling the solution.",
+          "fr": "Assistant IA entraîné sur les challenges Root-Me qui vous donne les bons outils pour capturer le flag — progression d'indices, crypto, web, rétro-ingénierie et plus sans spoiler la solution."
+        }
+      },
+      {
+        "title": "Cyberdeck Shield",
+        "badge": "badge-infra",
+        "badge_label": "Security · Honeypot",
+        "stack": ["Python", "Docker", "Honeypot", "AI Agents", "Network Security"],
+        "repo": "https://github.com/Khalil-secure/cyberdeck-shield",
+        "gif": "https://raw.githubusercontent.com/Khalil-secure/cyberdeck-shield/main/demo_cyberdeck_shield-ezgif.com-video-to-gif-converter%20(1).gif",
+        "description": {
+          "en": "A honeypot designed to trap and study AI agents — monitors interaction patterns, logs agent behaviour, and exposes how autonomous systems probe and interact with exposed infrastructure.",
+          "fr": "Un honeypot conçu pour piéger et étudier les agents IA — surveille les patterns d'interaction, journalise le comportement des agents et expose comment les systèmes autonomes sondent les infrastructures exposées."
+        }
+      },
+      {
         "title": "AII — AI as Infrastructure",
         "badge": "badge-ai",
         "badge_label": "AI · DevSecOps",
