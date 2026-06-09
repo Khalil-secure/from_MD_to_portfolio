@@ -204,7 +204,7 @@ Version alternative allégée de MailGuard avec une approche UI différente et d
 - **FR Description**: Electronique & Télécommunications · 2022-2025. Infrastructure & Sécurité.
 
 ### Certification #2: SOC Level 1
-- **Icon**: tryhackme.png
+- **Icon**: image.png
 - **Name**: SOC Level 1
 - **Issuer**: TryHackMe
 - **Status Badge**: Certified (green)

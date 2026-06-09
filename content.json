@@ -333,7 +333,7 @@
         }
       },
       {
-        "icon": "tryhackme.png",
+        "icon": "image.png",
         "icon_type": "image",
         "name": "SOC Level 1",
         "issuer": "TryHackMe",
