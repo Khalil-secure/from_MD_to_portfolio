@@ -57,7 +57,7 @@
 - **Tags**: Splunk, SIEM, Linux, Networking, SLA, Incident Response
 
 **EN Bullets**:
-- Architected and deployed the company's internal information system and web infrastructure with **near-SIEM supervision tools**
+- Architected and deployed the company's internal information system and web infrastructure with **SIEM supervision tools**
 - Implemented **Splunk SIEM** for centralised multi-source log analysis enabling early threat detection
 - Investigated and resolved critical incidents **on-call 24/7**, maintaining uptime in line with defined SLAs
 
