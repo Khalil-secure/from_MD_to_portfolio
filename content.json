@@ -19,8 +19,8 @@
     "name": "M. Khalil",
     "name_accent": "Ghiati.",
     "description": {
-      "en": "Engineering graduate specialised in <strong>cybersecurity</strong> and <strong>AI-driven infrastructure</strong>. I investigate security incidents, triage alerts, and build systems where <strong>AI enhances threat detection</strong> — not just as a plugin, but as a core component. From <strong>5G telecom at Bouygues</strong> to <strong>SOC operations and LLM agents monitoring production environments</strong>.",
-      "fr": "Ingénieur spécialisé en <strong>cybersécurité</strong> et <strong>infrastructure pilotée par IA</strong>. J'analyse les incidents de sécurité, trie les alertes et construis des systèmes où <strong>l'IA renforce la détection des menaces</strong> — pas comme un plugin, mais comme un composant central. Du <strong>5G chez Bouygues Telecom</strong> aux <strong>opérations SOC et agents LLM supervisant des environnements en production</strong>."
+      "en": "Engineering graduate specialised in <strong>cybersecurity</strong> and <strong>AI-driven infrastructure</strong>. I investigate security incidents, triage alerts, and build systems where <strong>AI enhances threat detection</strong> , not just as a plugin, but as a core component.",
+      "fr": "Ingénieur spécialisé en <strong>cybersécurité</strong> et <strong>infrastructure pilotée par IA</strong>. J'analyse les incidents de sécurité, trie les alertes et construis des systèmes où <strong>l'IA renforce la détection des menaces</strong> , pas comme un plugin, mais comme un composant central."
     },
     "socials": [
       {
@@ -54,6 +54,35 @@
       "fr": "// vrai travail · vrai impact · systèmes en production"
     },
     "jobs": [
+      {
+        "company": "Morocco ShipIt",
+        "period": "Sept 2025 — aujourd'hui",
+        "role": {
+          "en": "On-Call Systems & Network Administrator",
+          "fr": "Administrateur Systèmes & Réseaux On-Call"
+        },
+        "location": "Remote",
+        "tags": [
+          "Splunk",
+          "SIEM",
+          "Linux",
+          "Networking",
+          "SLA",
+          "Incident Response"
+        ],
+        "bullets": {
+          "en": [
+            "Architected and deployed the company's internal information system and web infrastructure with <strong>near-SIEM supervision tools</strong>",
+            "Implemented <strong>Splunk SIEM</strong> for centralised multi-source log analysis enabling early threat detection",
+            "Investigated and resolved critical incidents <strong>on-call 24/7</strong>, maintaining uptime in line with defined SLAs"
+          ],
+          "fr": [
+            "Architecturé et déployé le système d'information interne et l'infrastructure web avec des outils de supervision proches de <strong>SIEM</strong>",
+            "Implémenté un <strong>SIEM Splunk</strong> pour la centralisation et l'analyse proactive de logs multi-sources, permettant la détection précoce des menaces",
+            "Investigué et résolu des incidents critiques en astreinte <strong>24/7</strong>, assurant un taux de disponibilité conforme aux SLA définis"
+          ]
+        }
+      },
       {
         "company": "Bouygues Telecom",
         "period": "Sept 2024 — Sept 2025",
