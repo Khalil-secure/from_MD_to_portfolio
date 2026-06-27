@@ -180,6 +180,18 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 .cbg{background:var(--green-dim);color:var(--green);border:1px solid rgba(74,222,128,.2)}
 .cbb{background:rgba(96,165,250,.08);color:var(--blue);border:1px solid rgba(96,165,250,.18)}
 .cbo{background:rgba(251,146,60,.08);color:#fb923c;border:1px solid rgba(251,146,60,.18)}
+.cv-dl-wrap{position:relative}
+.cv-dl-btn{display:flex;align-items:center;gap:6px;padding:6px 13px;border:1px solid var(--border2);border-radius:6px;background:var(--bg2);color:var(--text2);font-size:.72rem;font-weight:500;cursor:pointer;transition:all .18s;font-family:var(--sans)}
+.cv-dl-btn:hover{border-color:rgba(74,222,128,.3);color:var(--green);background:var(--green-dim)}
+.cv-dl-btn svg{flex-shrink:0;opacity:.7;transition:opacity .18s}
+.cv-dl-btn:hover svg{opacity:1}
+.cv-dl-btn .cv-chevron{transition:transform .18s}
+.cv-dl-btn.open .cv-chevron{transform:rotate(180deg)}
+.cv-dropdown{position:absolute;top:calc(100% + 6px);right:0;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:4px;min-width:140px;box-shadow:var(--shadow2);display:none;z-index:200}
+.cv-dropdown.visible{display:block;animation:rise .15s ease}
+.cv-dl-opt{display:flex;align-items:center;gap:8px;width:100%;padding:8px 12px;border:none;background:transparent;color:var(--text2);font-size:.73rem;font-weight:500;border-radius:5px;cursor:pointer;text-decoration:none;transition:all .15s;font-family:var(--sans)}
+.cv-dl-opt:hover{background:var(--green-dim);color:var(--green)}
+.cv-dl-opt .cv-flag{font-size:.9rem}
 @media(max-width:860px){
   .top-bar{padding:10px 16px;flex-wrap:wrap;height:auto;gap:8px}
   nav{position:static;transform:none;order:3;width:100%;justify-content:center}
@@ -219,6 +231,21 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
       <button class="lang-btn" onclick="setLang('fr',this)">FR</button>
+    </div>
+    <div class="cv-dl-wrap" id="cv-dl-wrap">
+      <button class="cv-dl-btn" id="cv-dl-btn" onclick="toggleCvMenu(event)" aria-label="Download CV">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span id="cv-dl-label">CV</span>
+        <svg class="cv-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="cv-dropdown" id="cv-dropdown">
+        <a class="cv-dl-opt" href="CV/my_CVs__eng.pdf" download="Khalil_Ghiati_CV_EN.pdf">
+          <span class="cv-flag">🇬🇧</span> English
+        </a>
+        <a class="cv-dl-opt" href="CV/my_CV_fr.pdf" download="Khalil_Ghiati_CV_FR.pdf">
+          <span class="cv-flag">🇫🇷</span> Français
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -409,6 +436,21 @@ function renderRepos() {
 function loadMore() { renderRepos(); }
 
 window.currentLang = 'en';
+
+// ── CV download dropdown
+function toggleCvMenu(e) {
+  e.stopPropagation();
+  var btn = document.getElementById('cv-dl-btn');
+  var menu = document.getElementById('cv-dropdown');
+  var open = menu.classList.contains('visible');
+  btn.classList.toggle('open', !open);
+  menu.classList.toggle('visible', !open);
+}
+document.addEventListener('click', function() {
+  document.getElementById('cv-dl-btn').classList.remove('open');
+  document.getElementById('cv-dropdown').classList.remove('visible');
+});
+
 // renderDemos and setLang are defined in loadContent.js
 </script>
 
