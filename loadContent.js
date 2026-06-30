@@ -206,11 +206,7 @@ function renderDemos() {
     var tags = d.stack.map(function(s) { return '<span class="demo-tag">' + s + '</span>'; }).join('');
 
     if (d.pdf) {
-      // Derive a github blob URL for the "Open" button (renders in browser, not download)
-      var openUrl = d.pdf.replace(
-        /https:\/\/raw\.githubusercontent\.com\/([^/]+\/[^/]+)\//,
-        'https://github.com/$1/blob/'
-      );
+      var openUrl = d.pdf;
       var ghBtn = d.repo ? '<a href="' + d.repo + '" target="_blank" rel="noreferrer" class="demo-link demo-link-gh">GitHub ↗</a>' : '';
       var pdfBtn = '<a href="' + openUrl + '" target="_blank" rel="noreferrer" class="demo-link demo-link-live">Open PDF ↗</a>';
       return '<div class="demo-card demo-card--pdf">' +

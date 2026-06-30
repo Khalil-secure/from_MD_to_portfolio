@@ -214,7 +214,7 @@
           "Incident Response"
         ],
         "repo": "https://github.com/Khalil-secure/SOC-Incident-Report-Akira-Ransomware",
-        "pdf": "https://raw.githubusercontent.com/Khalil-secure/SOC-Incident-Report-Akira-Ransomware/main/TryHackMe-Incidents/SOC_Incident_Report_Redacted_EN_FR.pdf",
+        "pdf": "reports/SOC_Incident_Report_Redacted_EN_FR.pdf",
         "description": {
           "en": "Full incident response report for an Akira ransomware & Linux compromise scenario (TryHackMe SAL1). Covers detection, IOC analysis, containment and post-incident recommendations — bilingual EN/FR.",
           "fr": "Rapport complet de réponse à incident pour un scénario de ransomware Akira & compromission Linux (TryHackMe SAL1). Couvre la détection, l'analyse des IOC, le confinement et les recommandations post-incident — bilingue FR/EN."
