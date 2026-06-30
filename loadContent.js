@@ -206,15 +206,17 @@ function renderDemos() {
     var tags = d.stack.map(function(s) { return '<span class="demo-tag">' + s + '</span>'; }).join('');
 
     if (d.pdf) {
+      // Derive a github blob URL for the "Open" button (renders in browser, not download)
+      var openUrl = d.pdf.replace(
+        /https:\/\/raw\.githubusercontent\.com\/([^/]+\/[^/]+)\//,
+        'https://github.com/$1/blob/'
+      );
       var ghBtn = d.repo ? '<a href="' + d.repo + '" target="_blank" rel="noreferrer" class="demo-link demo-link-gh">GitHub ↗</a>' : '';
-      var pdfBtn = '<a href="' + d.pdf + '" target="_blank" rel="noreferrer" class="demo-link demo-link-live">View PDF ↗</a>';
+      var pdfBtn = '<a href="' + openUrl + '" target="_blank" rel="noreferrer" class="demo-link demo-link-live">Open PDF ↗</a>';
       return '<div class="demo-card demo-card--pdf">' +
-        '<div class="demo-thumb" style="height:190px">' +
-        '<div class="demo-thumb-placeholder">' +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="opacity:.18;width:40px;height:40px;color:var(--blue)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>' +
-        '<span>PDF Report</span>' +
-        '</div>' +
-        '<span class="demo-badge ' + d.badge + '">' + d.badge_label + '</span></div>' +
+        '<div class="demo-thumb" style="height:320px;padding:0;overflow:hidden">' +
+        '<embed src="' + d.pdf + '" type="application/pdf" width="100%" height="100%" style="display:block;border:none">' +
+        '<span class="demo-badge ' + d.badge + '" style="position:absolute;top:10px;left:10px">' + d.badge_label + '</span></div>' +
         '<div class="demo-body">' +
           '<div class="demo-title">' + d.title + '</div>' +
           '<div class="demo-desc">' + desc + '</div>' +
