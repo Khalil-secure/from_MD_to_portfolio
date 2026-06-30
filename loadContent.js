@@ -211,7 +211,7 @@ function renderDemos() {
       var pdfBtn = '<a href="' + openUrl + '" target="_blank" rel="noreferrer" class="demo-link demo-link-live">Open PDF ↗</a>';
       return '<div class="demo-card demo-card--pdf">' +
         '<div class="demo-thumb" style="height:320px;padding:0;overflow:hidden">' +
-        '<embed src="' + d.pdf + '" type="application/pdf" width="100%" height="100%" style="display:block;border:none">' +
+        '<embed src="' + d.pdf + '#view=FitH&toolbar=0" type="application/pdf" width="100%" height="100%" style="display:block;border:none">' +
         '<span class="demo-badge ' + d.badge + '" style="position:absolute;top:10px;left:10px">' + d.badge_label + '</span></div>' +
         '<div class="demo-body">' +
           '<div class="demo-title">' + d.title + '</div>' +
