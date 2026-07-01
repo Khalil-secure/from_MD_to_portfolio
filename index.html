@@ -198,7 +198,7 @@ nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;backgroun
 .cv-dl-btn:hover svg{opacity:1}
 .cv-dl-btn .cv-chevron{transition:transform .18s}
 .cv-dl-btn.open .cv-chevron{transform:rotate(180deg)}
-.cv-dropdown{position:absolute;top:calc(100% + 6px);right:0;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:4px;min-width:140px;box-shadow:var(--shadow2);display:none;z-index:200}
+.cv-dropdown{position:fixed;background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:4px;min-width:140px;box-shadow:var(--shadow2);display:none;z-index:1000}
 .cv-dropdown.visible{display:block;animation:rise .15s ease}
 .cv-dl-opt{display:flex;align-items:center;gap:8px;width:100%;padding:8px 12px;border:none;background:transparent;color:var(--text2);font-size:.73rem;font-weight:500;border-radius:5px;cursor:pointer;text-decoration:none;transition:all .15s;font-family:var(--sans)}
 .cv-dl-opt:hover{background:var(--green-dim);color:var(--green)}
@@ -455,6 +455,11 @@ function toggleCvMenu(e) {
   var btn = document.getElementById('cv-dl-btn');
   var menu = document.getElementById('cv-dropdown');
   var open = menu.classList.contains('visible');
+  if (!open) {
+    var r = btn.getBoundingClientRect();
+    menu.style.top = (r.bottom + 6) + 'px';
+    menu.style.right = (window.innerWidth - r.right) + 'px';
+  }
   btn.classList.toggle('open', !open);
   menu.classList.toggle('visible', !open);
 }
